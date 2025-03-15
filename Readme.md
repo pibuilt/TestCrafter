@@ -5,7 +5,6 @@ An AI-powered system that automatically generates unit test cases for Python, Ja
 ## Usage
 
 ### Installation  
-1. Clone this repository:  
-```sh
-git clone https://github.com/your-username/ai-test-generator.git
-cd ai-test-generator
+1. Clone this repository:
+'''git clone https://github.com/your-username/ai-test-generator.git
+cd ai-test-generator'''

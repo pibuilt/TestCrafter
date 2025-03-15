@@ -1,0 +1,7 @@
+flask
+flask-cors
+gitpython
+transformers
+torch
+pytest
+requests

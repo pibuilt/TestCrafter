@@ -15,12 +15,33 @@ cd TestCrafter/
 
 ```pip install -r Requirements.txt```
 
-3. Start Flask Server:
+### Running Locally
+1. Start Flask Server:
+
 ```python App/App.py```
 
-4. Send a request to generate test cases:  
+2. Send a request to generate test cases:
+   
 ```sh
 curl -X POST http://127.0.0.1:5000/generateTests \
      -H "Content-Type: application/json" \
      -d '{"repoUrl": "https://github.com/example-user/sample-repo"}'
+```
+
+### Running with Docker
+1. Build the Docker Image:
+
+```docker build -t TestCrafter . ```
+
+2. Run the Docker Container:
+
+``` docker run -p 5000:5000 TestCrafter ```
+
+3. Sending API Request:
+
+```sh
+curl -X POST http://127.0.0.1:5000/generateTests \
+     -H "Content-Type: application/json" \
+     -d '{"repoUrl": "https://github.com/example-user/sample-repo"}'
+```
 

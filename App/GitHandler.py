@@ -2,13 +2,14 @@ import os
 import git
 
 def cloneRepo(gitUrl, repoDir="RepoCode"):
-    """Clones a GitHub repository."""
-    if os.path.exists(repoDir):
-        os.system(f"rm -rf {repoDir}")
-    git.Repo.clone_from(gitUrl, repoDir)
+    try:
+        if os.path.exists(repoDir):
+            os.system(f"rm -rf {repoDir}")
+        git.Repo.clone_from(gitUrl, repoDir)
+    except Exception as e:
+        raise RuntimeError(f"Failed to clone repository: {str(e)}")
 
 def extractCodeFiles(repoDir="RepoCode"):
-    """Extracts Python, Java, and C++ files from the repository."""
     codeFiles = []
     for root, _, files in os.walk(repoDir):
         for file in files:

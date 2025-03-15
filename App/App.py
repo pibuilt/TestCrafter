@@ -21,8 +21,12 @@ def generateTests():
         return jsonify({"error": "GitHub repo URL is required"}), 400
 
     repoPath = "RepoCode"
-    cloneRepo(repoUrl, repoPath)
-    codeFiles = extractCodeFiles(repoPath)
+    
+    try:
+        cloneRepo(repoUrl, repoPath)
+        codeFiles = extractCodeFiles(repoPath)
+    except Exception as e:
+        return jsonify({"error": f"Failed to process repository: {str(e)}"}), 500
 
     response = []
     for fileName, sourceCode in codeFiles:

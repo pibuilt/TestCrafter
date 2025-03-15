@@ -6,7 +6,6 @@ tokenizer.padding_side = "left"
 model = AutoModelForSeq2SeqLM.from_pretrained(modelName)
 
 def generateTestCases(code, language):
-    """Generates unit test cases using AI."""
     try:
         prompt = f"Generate unit tests for this {language} code:\n{code}"
         inputs = tokenizer(prompt, return_tensors="pt", padding=True, truncation=True).to(device)

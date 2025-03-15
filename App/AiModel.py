@@ -2,6 +2,7 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 modelName = "Salesforce/codet5-large"
 tokenizer = AutoTokenizer.from_pretrained(modelName)
+tokenizer.padding_side = "left"
 model = AutoModelForSeq2SeqLM.from_pretrained(modelName)
 
 def generateTestCases(code, language):

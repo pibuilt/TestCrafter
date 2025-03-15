@@ -1,4 +1,4 @@
-# AI Test Case Generator
+# TestCrafter
 
 An AI-powered system that generates unit test cases for Python, Java, and C++ code from a given GitHub repository. It uses a pre-trained CodeT5 model to analyze the source code and generate test cases.
 

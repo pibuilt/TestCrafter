@@ -4,8 +4,8 @@ FROM python:3.12.3
 # Set the working directory inside the container
 WORKDIR /App
 
-# Copy the entire 'app' folder into the container
-COPY app /App
+# Copy the entire 'App' folder into the container
+COPY App /App
 
 # Copy requirements.txt separately
 COPY Requirements.txt /Requirements.txt

@@ -1,14 +1,11 @@
-# AI-Powered Test Case Generator
+# AI Test Case Generator
 
-## 🚀 Features
-✅ Clone GitHub repository  
-✅ Extract Python, Java, C++ code  
-✅ Generate AI-powered test cases  
-✅ Execute Python tests automatically  
-✅ Run inside a Docker container  
+An AI-powered system that automatically generates unit test cases for Python, Java, and C++ code from a given GitHub repository. It uses a pre-trained CodeT5 model to analyze the source code and generate meaningful test cases.
 
-## 🛠 How to Run
+## Usage
 
-### 1️⃣ Build the Docker Image
+### Installation  
+1. Clone this repository:  
 ```sh
-docker build -t ai-test-generator .
+git clone https://github.com/your-username/ai-test-generator.git
+cd ai-test-generator

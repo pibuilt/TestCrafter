@@ -1,18 +1,20 @@
-# Use Python 3.12.3 as the base image
+# Use a lightweight Python image
 FROM python:3.12.3
 
-# Set working directory inside container
-WORKDIR /app
+# Set the working directory inside the container
+WORKDIR /App
 
-# Copy requirements file and install dependencies
-COPY Requirements.txt .
-RUN pip install --no-cache-dir -r Requirements.txt
+# Copy the entire 'app' folder into the container
+COPY app /App
 
-# Copy application source code
-COPY . .
+# Copy requirements.txt separately
+COPY Requirements.txt /Requirements.txt
 
-# Expose port for Flask API
+# Install dependencies
+RUN pip install --no-cache-dir -r /Requirements.txt
+
+# Expose Flask API port
 EXPOSE 5000
 
-# Start the Flask app
-CMD ["python", "App/App.py"]
+# Run the Flask app
+CMD ["python", "/App/App.py"]

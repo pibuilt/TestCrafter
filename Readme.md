@@ -7,7 +7,8 @@ An AI-powered system that automatically generates unit test cases for Python, Ja
 ### Installation  
 1. Clone this repository:
    
-```git clone https://github.com/pibuilt/TestCrafter.git```
+```sh
+git clone https://github.com/pibuilt/TestCrafter.git ..
 
 2. Install dependencies:
 
